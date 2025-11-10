@@ -65,70 +65,66 @@ npm run dev
 
 
 ### ✅ Run & Verify
-Step-by-Step Verification
+## 🧾 Step-by-Step Verification
 
-Upload a CSV File
+### 🟢 1. Upload a CSV File
+- Use the provided **sample CSV** below.
+- Invalid columns or missing fields trigger clear validation errors.
 
-Use the provided sample CSV below.
+### 🟢 2. View Dashboard
+- Displays **overall metrics** → *average, minimum, and maximum miles run*.
+- Shows **per-person breakdowns** with individual charts/tables.
 
-Invalid columns or missing fields trigger validation errors.
+### 🟢 3. Chart Visualization
+- Displays **total miles run by each person over time**.
+- Includes **hover tooltips**, **axis labels**, and smooth chart transitions.
 
-View Dashboard
+### 🟢 4. Error Handling
+- **Invalid CSV →** shows descriptive error (e.g., `"Missing column: miles run"`).  
+- **Empty CSV →** shows message prompting upload of valid data.
 
-See overall metrics (avg/min/max miles run).
+---
 
-Per-person breakdowns appear in separate charts/tables.
-
-Chart Visualization
-
-Displays total miles run by each person over time.
-
-Hover tooltips and axis labels for clarity.
-
-Error Handling
-
-Invalid CSV → descriptive error message (e.g., "Missing column: miles run").
-
-Empty CSV → message prompting user to upload valid data.
-
-Sample CSV
+### 📂 **Sample CSV**
+```csv
 date,person,miles run
 2025-01-01,John,3.5
 2025-01-02,Jane,5.2
 2025-01-03,John,4.1
 2025-01-04,Jane,2.9
 2025-01-05,Mark,6.3
+```
 
-### 📊 Features & Limitations
+📊 Features & Limitations
 ✅ Features
 
-CSV upload, parsing, and validation using Papaparse.
+📁 CSV Upload, Parsing & Validation using Papaparse.
 
-Dynamic charts using Recharts (line + bar visualization).
+📊 Dynamic Charts (line + bar) powered by Recharts.
 
-Per-person analytics and overall summary metrics.
+👥 Per-person analytics and overall summary metrics.
 
-Modern shadcn/ui components with accessible design.
+🧱 Modern shadcn/ui components with accessible design.
 
-Handles invalid, empty, and malformed CSV gracefully.
+⚙️ Handles invalid, empty, and malformed CSVs gracefully.
 
 ⚠️ Limitations
 
-No persistent storage (data resets on refresh).
+❌ No persistent storage (data resets on refresh).
 
-Large CSVs (>10k rows) may cause minor performance lag.
+🕒 Large CSVs (>10k rows) may cause slight performance lag.
 
-Only supports CSV format (no Excel/JSON input).
+📄 Only supports CSV format (no Excel/JSON input).
 
-### 🔮 Future Improvements
+🔮 Future Improvements
 
-Add local storage or backend persistence.
+💾 Add local storage or backend persistence.
 
-Support file drag-and-drop uploads.
+🖱️ Support file drag-and-drop uploads.
 
-Export filtered data and charts as images.
+🖼️ Allow exporting filtered data and charts as images.
 
-Add filters by date range and runner name.
+📅 Add filters by date range and runner name.
 
 ### 🧱 Notes on Architecture
 
@@ -159,19 +155,23 @@ csv-runner-dashboard/
 
 CSV data is parsed via Papaparse → stored in React state.
 
-State is shared across charts and metrics using context or props.
+State is shared across charts and metrics using Context API or props.
 
-Computations for avg/min/max are done in-memory.
+Average, Min, and Max computations are done in-memory.
 
-Recharts renders data reactively when state updates.
+Recharts updates automatically when the state changes.
 
-### ♿ Accessibility & UI
+♿ Accessibility & UI
 
-All form inputs use associated labels for screen readers.
+🏷️ All form inputs have associated labels for screen readers.
 
-Proper focus states, high contrast, and clear spacing.
+🎯 Proper focus states, color contrast, and spacing maintained.
 
-Responsive layout for desktop and mobile using Tailwind grid utilities.
+📱 Responsive layout for desktop & mobile using Tailwind grid utilities.
+
+🧭 Charts include tooltips, legends, and accessible colors.
+
+✨ Typography and spacing follow shadcn/ui design guidelines.
 
 Charts include tooltips, legends, and accessible color contrast.
 
