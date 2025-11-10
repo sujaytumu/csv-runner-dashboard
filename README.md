@@ -133,6 +133,8 @@ Add filters by date range and runner name.
 ### 🧱 Notes on Architecture
 
 🗂️ Folder Structure
+
+```
 csv-runner-dashboard/
 ├── app/
 │   ├── page.tsx            # Main dashboard page
@@ -151,6 +153,7 @@ csv-runner-dashboard/
 ├── .env.example
 ├── package.json
 └── README.md
+```
 
 🧮 Data & State Flow
 
