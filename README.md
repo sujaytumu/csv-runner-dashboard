@@ -62,3 +62,114 @@ Create a .env file from .env.example:
 
 ### 4️⃣ Run the Development Server
 npm run dev
+
+
+### ✅ Run & Verify
+Step-by-Step Verification
+
+Upload a CSV File
+
+Use the provided sample CSV below.
+
+Invalid columns or missing fields trigger validation errors.
+
+View Dashboard
+
+See overall metrics (avg/min/max miles run).
+
+Per-person breakdowns appear in separate charts/tables.
+
+Chart Visualization
+
+Displays total miles run by each person over time.
+
+Hover tooltips and axis labels for clarity.
+
+Error Handling
+
+Invalid CSV → descriptive error message (e.g., "Missing column: miles run").
+
+Empty CSV → message prompting user to upload valid data.
+
+Sample CSV
+date,person,miles run
+2025-01-01,John,3.5
+2025-01-02,Jane,5.2
+2025-01-03,John,4.1
+2025-01-04,Jane,2.9
+2025-01-05,Mark,6.3
+
+### 📊 Features & Limitations
+✅ Features
+
+CSV upload, parsing, and validation using Papaparse.
+
+Dynamic charts using Recharts (line + bar visualization).
+
+Per-person analytics and overall summary metrics.
+
+Modern shadcn/ui components with accessible design.
+
+Handles invalid, empty, and malformed CSV gracefully.
+
+⚠️ Limitations
+
+No persistent storage (data resets on refresh).
+
+Large CSVs (>10k rows) may cause minor performance lag.
+
+Only supports CSV format (no Excel/JSON input).
+
+### 🔮 Future Improvements
+
+Add local storage or backend persistence.
+
+Support file drag-and-drop uploads.
+
+Export filtered data and charts as images.
+
+Add filters by date range and runner name.
+
+### 🧱 Notes on Architecture
+
+🗂️ Folder Structure
+csv-runner-dashboard/
+├── app/
+│   ├── page.tsx            # Main dashboard page
+│   ├── components/
+│   │   ├── UploadForm.tsx  # Handles CSV upload and parsing
+│   │   ├── Charts.tsx      # Renders overall + per-person charts
+│   │   └── Metrics.tsx     # Displays summary metrics
+│   ├── lib/
+│   │   └── parseCSV.ts     # CSV validation and formatting logic
+│   ├── styles/
+│   │   └── globals.css     # Tailwind + global styles
+│   └── utils/
+│       └── helpers.ts      # Utility functions for stats computation
+├── public/
+│   └── sample.csv          # Sample CSV for testing
+├── .env.example
+├── package.json
+└── README.md
+
+🧮 Data & State Flow
+
+CSV data is parsed via Papaparse → stored in React state.
+
+State is shared across charts and metrics using context or props.
+
+Computations for avg/min/max are done in-memory.
+
+Recharts renders data reactively when state updates.
+
+### ♿ Accessibility & UI
+
+All form inputs use associated labels for screen readers.
+
+Proper focus states, high contrast, and clear spacing.
+
+Responsive layout for desktop and mobile using Tailwind grid utilities.
+
+Charts include tooltips, legends, and accessible color contrast.
+
+Typography and spacing aligned with shadcn/ui design guidelines.
