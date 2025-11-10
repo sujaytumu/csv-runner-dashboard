@@ -96,7 +96,7 @@ date,person,miles run
 ```
 
 ## 📊 Features & Limitations
-###✅ Features
+### ✅ Features
 
 📁 CSV Upload, Parsing & Validation using Papaparse.
 
@@ -108,7 +108,7 @@ date,person,miles run
 
 ⚙️ Handles invalid, empty, and malformed CSVs gracefully.
 
-###⚠️ Limitations
+### ⚠️ Limitations
 
 ❌ No persistent storage (data resets on refresh).
 
@@ -151,7 +151,7 @@ csv-runner-dashboard/
 └── README.md
 ```
 
-###🧮 Data & State Flow
+### 🧮 Data & State Flow
 
 CSV data is parsed via Papaparse → stored in React state.
 
@@ -161,7 +161,7 @@ Average, Min, and Max computations are done in-memory.
 
 Recharts updates automatically when the state changes.
 
-##♿ Accessibility & UI
+## ♿ Accessibility & UI
 
 🏷️ All form inputs have associated labels for screen readers.
 
