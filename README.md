@@ -64,7 +64,7 @@ Create a .env file from .env.example:
 npm run dev
 
 
-### ✅ Run & Verify
+## ✅ Run & Verify
 ## 🧾 Step-by-Step Verification
 
 ### 🟢 1. Upload a CSV File
@@ -95,8 +95,8 @@ date,person,miles run
 2025-01-05,Mark,6.3
 ```
 
-📊 Features & Limitations
-✅ Features
+## 📊 Features & Limitations
+###✅ Features
 
 📁 CSV Upload, Parsing & Validation using Papaparse.
 
@@ -108,7 +108,7 @@ date,person,miles run
 
 ⚙️ Handles invalid, empty, and malformed CSVs gracefully.
 
-⚠️ Limitations
+###⚠️ Limitations
 
 ❌ No persistent storage (data resets on refresh).
 
@@ -126,7 +126,7 @@ date,person,miles run
 
 📅 Add filters by date range and runner name.
 
-### 🧱 Notes on Architecture
+## 🧱 Notes on Architecture
 
 🗂️ Folder Structure
 
@@ -151,7 +151,7 @@ csv-runner-dashboard/
 └── README.md
 ```
 
-🧮 Data & State Flow
+###🧮 Data & State Flow
 
 CSV data is parsed via Papaparse → stored in React state.
 
@@ -161,7 +161,7 @@ Average, Min, and Max computations are done in-memory.
 
 Recharts updates automatically when the state changes.
 
-♿ Accessibility & UI
+##♿ Accessibility & UI
 
 🏷️ All form inputs have associated labels for screen readers.
 
